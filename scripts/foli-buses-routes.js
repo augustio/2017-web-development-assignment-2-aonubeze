@@ -74,31 +74,36 @@ function showBusesLocation(route_id){
 
 
 function showRoute(route_id){
-    getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/20171130-162538/trips/route/"+route_id)
-        .then(function(data){
-            var index = Math.floor((Math.random() * data.length) + 1);
-            return data[index].shape_id;
-        })
-        .then(function(shape_id){
-            getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs/v0/20171130-162538/shapes/"+shape_id)
-                .then(function(shape){
-                    var pathCoordinates = shape.map(function(line){
-                        return {lat: line.lat, lng: line.lon};
-                    });
-                    busPath = new google.maps.Polyline({
-                        path: pathCoordinates,
-                        geodesic: true,
-                        strokeColor: '#000FF',
-                        strokeOpacity: 1.0,
-                        strokeWeight: 2
-                    });
-                    if(oldBusPath){
-                        oldBusPath.setMap(null);
-                    }
-                    busPath.setMap(map);
-                    oldBusPath = busPath;
-                })
+    var path;
+    getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi/gtfs").then(function(metaData){
+        path = {
+          gtfspath: metaData.gtfspath,
+          dataset: metaData.latest
+        }
+    }).then(function(){
+      getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi"+path.gtfspath+"/"+path.dataset+"/trips/route/"+route_id).then(function(data){
+        var index = Math.floor((Math.random() * data.length) + 1);
+        return data[index].shape_id;
+      }).then(function(shape_id){
+        getJSON("https://cors-anywhere.herokuapp.com/http://data.foli.fi"+path.gtfspath+"/"+path.dataset+"/shapes/"+shape_id).then(function(shape){
+          var pathCoordinates = shape.map(function(line){
+            return {lat: line.lat, lng: line.lon};
+          });
+          busPath = new google.maps.Polyline({
+              path: pathCoordinates,
+              geodesic: true,
+              strokeColor: '#000FF',
+              strokeOpacity: 1.0,
+              strokeWeight: 2
+          });
+          if(oldBusPath){
+              oldBusPath.setMap(null);
+          }
+          busPath.setMap(map);
+          oldBusPath = busPath;
         });
+      });
+    });
 }
 
 function getJSON(url){

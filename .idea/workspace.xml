@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79144ace-ac6f-4111-81b0-d4b4d62cc40b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/foli-buses-routes.js" afterPath="$PROJECT_DIR$/scripts/foli-buses-routes.js" />
-    </list>
+    <list default="true" id="79144ace-ac6f-4111-81b0-d4b4d62cc40b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -49,8 +47,8 @@
       <file leaf-file-name="foli-buses-routes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/foli-buses-routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2163">
-              <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+            <state relative-caret-position="128">
+              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -203,11 +201,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70669000" />
+    <option name="totallyTimeSpent" value="71501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1060" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -629,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/foli-buses-routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2163">
-          <caret line="103" column="21" lean-forward="true" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
+        <state relative-caret-position="128">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
           <folding />
         </state>
       </provider>
